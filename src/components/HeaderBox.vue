@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1 class="text-center">test</h1>
+    <img class="mx-2 py-2" src="@/assets/logo-small.svg" alt="">
   </header>
 </template>
 
