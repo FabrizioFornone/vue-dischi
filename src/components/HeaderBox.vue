@@ -1,12 +1,12 @@
 <template>
   <header>
-    <img class="mx-2 py-2" src="@/assets/logo-small.svg" alt="">
+    <img class="mx-3 py-2" src="@/assets/logo-small.svg" alt="">
   </header>
 </template>
 
 <script>
 export default {
-    
+
 };
 </script>
 

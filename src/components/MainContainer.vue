@@ -1,9 +1,9 @@
 <template>
   <main>
-    <div class="container">
+    <div class="container-custom my-4">
       <div class="d-flex flex-wrap">
         <div
-          class="disc-box mt-5 text-center"
+          class="disc-box text-center"
           v-for="(album, index) in discsList"
           :key="index"
         >

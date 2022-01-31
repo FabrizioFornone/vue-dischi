@@ -1,16 +1,16 @@
 .single-album {
   border: 1px solid transparent;
   cursor: pointer;
-  width: 80%;
+  width: 170px;
   height: 320px;
-  background-color: #32323248;
+  background-color: #04072034;
 
   &:hover {
     border: 1px solid #ccc;
   }
 
   img {
-    width: 150px;
+    width: 130px;
   }
 
   hr {
