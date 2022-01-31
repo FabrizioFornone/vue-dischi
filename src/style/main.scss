@@ -1,5 +1,6 @@
 @import "~bootstrap/scss/bootstrap.scss";
+@import "@/style/variabiles.scss";
 
 body {
-    background-color: #040720ce;
+  background-color: $bg-color;
 }

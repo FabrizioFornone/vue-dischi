@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header-box />
-    <main-container :discsList="discs"/>
+    <main-container :discsList="discs" />
   </div>
 </template>
 
@@ -26,7 +26,6 @@ export default {
       .get("https://flynn.boolean.careers/exercises/api/array/music")
       .then((response) => {
         this.discs = response.data.response;
-        console.log(this.discs);
       });
   },
 };

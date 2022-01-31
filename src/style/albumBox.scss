@@ -1,9 +1,11 @@
+@import "@/style/variabiles.scss";
+
 .single-album {
   border: 1px solid transparent;
   cursor: pointer;
   width: 170px;
   height: 320px;
-  background-color: #04072034;
+  background-color: $bg-dark-color;
 
   &:hover {
     border: 1px solid #ccc;
@@ -11,10 +13,5 @@
 
   img {
     width: 130px;
-  }
-
-  hr {
-    width: 50px;
-    margin: 0 auto;
   }
 }
