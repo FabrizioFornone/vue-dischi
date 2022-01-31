@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <header-box :discsList="discs" />
+    <header-box :discsList="discs" :loadingValue="loading" />
     <main-container :discsList="discs" />
   </div>
 </template>
@@ -19,6 +19,7 @@ export default {
   data() {
     return {
       discs: [],
+      loading: true,
     };
   },
   mounted() {
@@ -26,6 +27,7 @@ export default {
       .get("https://flynn.boolean.careers/exercises/api/array/music")
       .then((response) => {
         this.discs = response.data.response;
+        this.loading = false;
       });
   },
 };

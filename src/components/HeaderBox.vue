@@ -2,7 +2,7 @@
   <header>
     <div class="mx-3 py-2 d-flex justify-content-between">
       <img class="" src="@/assets/logo-small.svg" alt="" />
-      <loader v-if="discsList.length < 10" />
+      <loader v-if="loadingValue" />
     </div>
   </header>
 </template>
@@ -13,6 +13,7 @@ export default {
   components: { Loader },
   props: {
     discsList: Array,
+    loadingValue: Boolean,
   },
 };
 </script>
