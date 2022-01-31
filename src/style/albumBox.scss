@@ -2,7 +2,6 @@
 
 .single-album {
   border: 1px solid transparent;
-  cursor: pointer;
   width: 170px;
   height: 320px;
   background-color: $bg-dark-color;
@@ -11,7 +10,11 @@
     border: 1px solid #ccc;
   }
 
-  img {
-    width: 130px;
+  a {
+    text-decoration: none;
+
+    img {
+      width: 130px;
+    }
   }
 }
