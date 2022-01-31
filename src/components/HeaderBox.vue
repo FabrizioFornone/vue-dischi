@@ -2,7 +2,7 @@
   <header>
     <div class="mx-3 py-2 d-flex justify-content-between">
       <img class="" src="@/assets/logo-small.svg" alt="" />
-      <loader />
+      <loader v-if="discsList.length < 10" />
     </div>
   </header>
 </template>
@@ -11,6 +11,9 @@
 import Loader from "./Loader.vue";
 export default {
   components: { Loader },
+  props: {
+    discsList: Array,
+  },
 };
 </script>
 

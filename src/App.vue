@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <header-box />
+    <header-box :discsList="discs" />
     <main-container :discsList="discs" />
   </div>
 </template>
