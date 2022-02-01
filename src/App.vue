@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <header-box :discsList="discs" :loadingValue="loading" @search='filterResult' />
+    <header-box
+      :discsList="discs"
+      :loadingValue="loading"
+      @search="filterResult"
+    />
     <main-container :discsList="discsFiltered" />
   </div>
 </template>
@@ -33,12 +37,15 @@ export default {
   },
   methods: {
     filterResult(keyword) {
-      this.discsFiltered = this.discs.filter((disc) => {
-        return disc.genre.toLowerCase().includes(keyword);
-      })
-
-    }
-  }
+      if (keyword === "all") {
+        this.discsFiltered = this.discs;
+      } else {
+        this.discsFiltered = this.discs.filter((disc) => {
+          return disc.genre.toLowerCase().includes(keyword);
+        });
+      }
+    },
+  },
 };
 </script>
 
