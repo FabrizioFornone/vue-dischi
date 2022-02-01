@@ -46,7 +46,7 @@ export default {
         this.discsFiltered = this.discs;
       } else {
         this.discsFiltered = this.discs.filter((disc) => {
-          return disc.genre.toLowerCase().includes(keyword);
+          return disc.genre.includes(keyword);
         });
       }
     },

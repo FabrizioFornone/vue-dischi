@@ -10,7 +10,7 @@
           v-model="selected"
         >
           <option value="all">All</option>
-          <option v-for="(discGenre, index) in genreProp" :key="index" :value="discGenre.genre.toLowerCase()">{{discGenre.genre}}</option>
+          <option v-for="(discGenre, index) in genreProp" :key="index" :value="discGenre.genre">{{discGenre.genre}}</option>
         </select>
       </div>
       <loader v-if="loadingValue" />
