@@ -1,6 +1,7 @@
-header {
-  background-color: #04072034;
+@import "@/style/variabiles.scss";
 
+header {
+  background-color: $bg-color;
   img {
     width: 30px;
   }

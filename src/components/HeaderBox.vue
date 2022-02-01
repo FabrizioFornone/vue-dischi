@@ -1,7 +1,16 @@
 <template>
   <header>
     <div class="mx-3 py-2 d-flex justify-content-between">
-      <img class="" src="@/assets/logo-small.svg" alt="" />
+      <div class="d-flex align-item-center">
+        <img class="" src="@/assets/logo-small.svg" alt="" />
+        <select class="mx-5 px-3" name="">
+          <option value="all">All</option>
+          <option value="rock">Rock</option>
+          <option value="pop">Pop</option>
+          <option value="jazz">Jazz</option>
+          <option value="metal">Metal</option>
+        </select>
+      </div>
       <loader v-if="loadingValue" />
     </div>
   </header>
