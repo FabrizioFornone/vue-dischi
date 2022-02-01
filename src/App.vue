@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <header-box :discsList="discs" :loadingValue="loading" />
-    <main-container :discsList="discs" />
+    <header-box :discsList="discs" :loadingValue="loading" @search='filterResult' />
+    <main-container :discsList="discsFiltered" />
   </div>
 </template>
 
@@ -19,6 +19,7 @@ export default {
   data() {
     return {
       discs: [],
+      discsFiltered: [],
       loading: true,
     };
   },
@@ -30,6 +31,14 @@ export default {
         this.loading = false;
       });
   },
+  methods: {
+    filterResult(keyword) {
+      this.discsFiltered = this.discs.filter((disc) => {
+        return disc.genre.toLowerCase().includes(keyword);
+      })
+
+    }
+  }
 };
 </script>
 
