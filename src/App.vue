@@ -3,6 +3,7 @@
     <header-box
       :discsList="discs"
       :loadingValue="loading"
+      :genreProp="genreList"
       @search="filterResult"
     />
     <main-container :discsList="discsFiltered" />
@@ -25,6 +26,7 @@ export default {
       discs: [],
       discsFiltered: [],
       loading: true,
+      genreList: [],
     };
   },
   mounted() {
@@ -34,6 +36,8 @@ export default {
         this.discs = response.data.response;
         this.discsFiltered = response.data.response;
         this.loading = false;
+        this.genreFilter();
+        console.log(this.genreList);
       });
   },
   methods: {
@@ -45,6 +49,13 @@ export default {
           return disc.genre.toLowerCase().includes(keyword);
         });
       }
+    },
+    genreFilter() {
+      this.genreList = this.discs.filter((disc) => {
+        if (!this.genreList.includes(disc.genre)) {
+          return this.genreList.push(disc.genre);
+        }
+      });
     },
   },
 };
